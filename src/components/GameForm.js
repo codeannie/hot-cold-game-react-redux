@@ -11,11 +11,12 @@ export class GameForm extends React.Component {
   // parse the integer before it goes into the Redux store 
   handleSubmit(e) {
     e.preventDefault();
-    // const number = this.refs.guessInput.value;
-    const number = parseInt(this.refs.guessInput.value);
-    // check if this is a number then store it, if it's not a number, throw an error
+    const number = parseInt(this.refs.guessInput.value, 10);
     console.log('guess input from form ->', number);
+    // add to redux store 
     this.props.makeGuess(number);
+    // array is not updating immediately - async task;
+    // console.log('check array ->', this.props.guesses);
     this.refs.gameForm.reset();
   }
 
