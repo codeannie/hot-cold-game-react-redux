@@ -10,16 +10,6 @@ class Feedback extends React.Component {
       gameWon: false
     }
   }
-
-  // componentWillMount() {
-  //   this.handleGuess();
-  // }
-
-  // double check logic 
-  // showing feedback one delayed  
-  // componentWillUpdate(nextProps) {
-  // componentWillReceiveProps(nextProps) {
-
     // this looks for a change within that render every time
     componentDidUpdate(nextProps) {
     if(this.props.guesses.length !== nextProps.guesses.length) {
@@ -27,25 +17,7 @@ class Feedback extends React.Component {
     }
   }
 
-  // control whether or not it should update
-  // shouldComponentUpdate(nextProps) {
-  //   // if the last guess of the previous prop is not equal to last guess
-  //   // of new props, then don't update 
-  //   if (!this.props) {
-  //     return;
-  //   }
-  //   console.log(this.props);
-  //   console.log('next props->', nextProps);
-  //   return this.props.guesses[this.props.guesses.length-1] !==
-  //   nextProps.guesses[nextProps.guesses.length-1];
-  // }
-
-  // pass in guess # and target 
-  // inside feedback logic, 
-  // guess would become undefined if no guesses in the list
-  // if not guess, then display starting text or empty string 
   handleGuess(){
-    // console.log ('guess to the function?->', guess);
     let guess = this.props.guesses[this.props.guesses.length-1];
       if(isNaN(guess)) {
         this.setState({
@@ -111,3 +83,5 @@ const mapStateToProps = (state) => {
 };
 
 export default connect(mapStateToProps, null)(Feedback);
+
+// need to fix new game button to reset feedback and game won to false? 
