@@ -12,8 +12,6 @@ import logo from './logo.svg';
 import './App.css';
 
 export class App extends Component {
-  // should this be moved to game form?
-  // it works but how to reset local state for feedback on gameform?
   newGame() {
     console.log('new game button CLICKed');
     this.props.newGame();
