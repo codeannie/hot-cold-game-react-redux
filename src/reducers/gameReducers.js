@@ -14,8 +14,8 @@ const initialState = {
 const gameReducer = (state = initialState, action) => {
   switch (action.type) {
     case GUESS_NUMBER:
-    console.log('update state with new guess->', action.payload.number)
-    console.log('answer ->', state.targetNumber);
+    // console.log('update state with new guess->', action.payload.number)
+    // console.log('answer ->', state.targetNumber);
 
       return {
         ...state,

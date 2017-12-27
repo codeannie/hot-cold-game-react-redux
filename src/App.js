@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import GameForm from './components/GameForm';
 import GuessList from './components/NumberList';
-import Feedback from './components/Feedback';
+// import Feedback from './components/Feedback';
 
 import logo from './logo.svg';
 import './App.css';
@@ -17,7 +17,7 @@ class App extends Component {
         <p className="App-intro">
           Guess the number between 1 and 100!
         </p>
-        <Feedback />
+        {/* <Feedback /> */}
         <GameForm />
         <GuessList />
       </div>
