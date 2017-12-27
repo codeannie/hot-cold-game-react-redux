@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import GameForm from './components/GameForm';
 import GuessList from './components/NumberList';
 import NewGameButton from './components/NewGame';
-// import Feedback from './components/Feedback';
+import Feedback from './components/Feedback';
 
 import { connect } from 'react-redux';
 import { newGameAction } from './actions/actionCreator';
@@ -31,7 +31,7 @@ export class App extends Component {
           <p className="App-intro">
             Guess the number between 1 and 100!
           </p>
-          {/* <Feedback /> */}
+          <Feedback />
           <GameForm />
           <GuessList />
         </main>
