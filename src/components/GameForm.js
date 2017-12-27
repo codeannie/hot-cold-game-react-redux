@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { guessNumberAction, newGameAction } from '../actions/actionCreator';
+import { guessNumberAction } from '../actions/actionCreator';
 import Feedback from './Feedback';
 
 export class GameForm extends React.Component {
@@ -68,7 +68,7 @@ export class GameForm extends React.Component {
     if(this.state.gameWon === true) {
       return;
     }
-    
+
     if(isNaN(guess)) {
       this.setState({
         feedback: 'Please enter a valid number'
@@ -102,10 +102,6 @@ const mapDispatchToProps = (dispatch) => {
   return {
     makeGuess(number) {
       const action = guessNumberAction(number);
-      dispatch(action);
-    },
-    newGame() {
-      const action = newGameAction();
       dispatch(action);
     }
   }

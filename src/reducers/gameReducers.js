@@ -25,8 +25,7 @@ const gameReducer = (state = initialState, action) => {
     case NEW_GAME:
     console.log('start new game!');
     //not sure if it works this way or needs to be initial state
-      return state; 
-
+      return initialState;
     default: 
       return state;
   }
